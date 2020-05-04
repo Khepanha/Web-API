@@ -9,7 +9,7 @@ const client = new Client({
     "post":5432,
     "database":"vr_vocabulary"
 })
-app.get("/todos", async (req,res) => {
+app.get("/test", async (req,res) => {
     const rows = await readTodos();
     res.setHeader("content-type", "application/json")
     res.send(JSON.stringify(rows))
@@ -28,8 +28,8 @@ start()
 async function start() {
     await connect();
 
-    // const todos = await readTodos();
-    // console.log(todos)
+    const todos = await readTodos();
+    console.log(todos)
     // const successCreate = await createTodo("Go to trader joes")
     // console.log(`Creating was ${successCreate}`)
     // const successDelete = await deleteTodo(1)
@@ -47,11 +47,11 @@ async function connect() {
 
 async function readTodos() {
     try {
-    const results = await client.query("select id, text from todos");
+    const results = await client.query("select * from test");
     return results.rows;
     }
     catch(e){
-        return [];
+        return [e];
     }
 }
 
