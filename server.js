@@ -4,7 +4,7 @@ const app = express();
 
 const client = new Client({
     "user":"lens_of_reality",
-    "password":"{%lor2020%^postgresql*%}",
+    "password":"xxxxxxx",
     "host":"192.168.7.92",
     "post":5432,
     "database":"vr_vocabulary"
