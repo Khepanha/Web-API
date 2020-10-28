@@ -4,10 +4,10 @@ const app = express();
 const https = require("https")
 
 const client = new Client({
-    "user":"lens_of_reality",
-    "password":"{%lor2020%^postgresql*%}",
-    "host":"192.168.7.92",
-    "post":5432,
+    "user":"******",
+    "password":"******",
+    "host":"******",
+    "post":****,
     "database":"vr_vocabulary"
 })
 // const server = https.createServer("/api/test", async(req,res) => {
